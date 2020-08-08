@@ -4,14 +4,20 @@ import gql from 'graphql-tag';
 import { withApollo } from '../lib/apollo';
 import Layout from '../components/Layout';
 
-const HELLO_QUERY = gql`
-  query HelloQuery {
-    sayHello
+const EMPLOYEES_QUERY = gql`
+  query EmployeesQuery {
+    employees {
+      id
+      name
+      position
+      image
+      status
+    }
   }
 `;
 
 const Home = () => {
-  const { data, loading, error } = useQuery(HELLO_QUERY);
+  const { data, loading, error } = useQuery(EMPLOYEES_QUERY);
   if (loading) return <div />;
   return (
     <Layout>
