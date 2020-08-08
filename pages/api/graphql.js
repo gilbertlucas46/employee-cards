@@ -1,29 +1,25 @@
-import { ApolloServer, gql } from 'apollo-server-micro'; // Micro integration for apollo server
+import { ApolloServer, gql } from 'apollo-server-micro';
 
 const typeDefs = gql`
-    type Query {
-        sayHello: String
-    }
-`
+  type Query {
+    sayHello: String
+  }
+`;
 
 const resolvers = {
-    Query: {
-        sayHello: () => {
-            return "hello levelup"
-        }
+  Query: {
+    sayHello: () => {
+      return 'Hello Level Up!';
     }
-}
+  }
+};
 
-const apolloServer = new ApolloServer({
-    typeDefs, resolvers
-});
+const apolloServer = new ApolloServer({ typeDefs, resolvers });
 
 export const config = {
-    api: {
-        bodyParser: false
-    }
-}
+  api: {
+    bodyParser: false
+  }
+};
 
-export default apolloServer.createHandler({
-    path: '/api/graphql'
-})
+export default apolloServer.createHandler({ path: '/api/graphql' });
