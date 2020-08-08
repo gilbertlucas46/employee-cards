@@ -20,7 +20,6 @@ const typeDefs = mergeTypeDefs([
   Employess,
 ]);
 
-
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
 
 export const config = {
