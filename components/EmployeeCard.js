@@ -40,9 +40,8 @@ const HeadShot = styled.figure`
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
-
     width: 100%;
-    height: 14em;
+    height: 18em;
     background-image: url(${({ image }) => image});
     background-size: cover;
     background-position: center center;
