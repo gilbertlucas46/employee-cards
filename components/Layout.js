@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Header from './Head';
 import { mediaQueries } from './MediaQueries';
+import { useSpring, animated }  from 'react-spring';
+
+
 
 const LayoutContainer = styled.div`
     margin: auto;
@@ -12,11 +15,14 @@ const LayoutContainer = styled.div`
 `;
 
 const Layout = ({ children }) => {
+    const fade = useSpring({from: {opacity: 0},opacity: 1});
     return (
-        <LayoutContainer>
-            <Header/>
-            <main>{children}</main>
-        </LayoutContainer>
+        <animated.div style={fade}>
+            <LayoutContainer>
+                <Header/>
+                <main>{children}</main>
+            </LayoutContainer>
+        </animated.div>
     );
 };
 
