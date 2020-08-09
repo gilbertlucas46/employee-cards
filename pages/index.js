@@ -12,7 +12,7 @@ const Home = () => (
                 content="initial-scale=1.0, width=device-width"
             />
         </Head>
-        <h2>Employees List</h2>
+        <h2>EMPLOYEES</h2>
         <EmployeesList />
     </Layout>
 );

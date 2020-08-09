@@ -57,12 +57,15 @@ const StyledGrid = styled.div`
 
 const FilterWrapper = styled.div`
     margin-bottom: 1.5em;
+    padding: 1px;
     select {
         width: 100%;
         height: 48px;
         text-indent: 0.6em;
         margin-top: 0.8em;
         outline: unset;
+        border-radius: 0.4em;
+        border: 2px solid ${({ theme }) => theme.colors.gray};
     }
 `;
 
