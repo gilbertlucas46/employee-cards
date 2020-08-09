@@ -1,26 +1,19 @@
-import Head from "next/head";
-import Nav from "./Nav";
 import styled from "styled-components";
+import Header from './Head';
 import { mediaQueries } from './MediaQueries';
 
 const LayoutContainer = styled.div`
     margin: auto;
-    ${mediaQueries("md")`
-        
-    `};
-    ${mediaQueries("lg")`
-       
+    padding: 2em 15px;
+    ${mediaQueries("xl")`
+       max-width: 1280px;
     `};
 `;
 
 const Layout = ({ children }) => {
     return (
         <LayoutContainer>
-            <Head>
-                <title>Home</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <Nav />
+            <Header/>
             <main>{children}</main>
         </LayoutContainer>
     );
