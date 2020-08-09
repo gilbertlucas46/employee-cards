@@ -5,6 +5,7 @@ import { mediaQueries } from './MediaQueries';
 const LayoutContainer = styled.div`
     margin: auto;
     padding: 2em 15px;
+    min-height: 1200px;
     ${mediaQueries("xl")`
        max-width: 1280px;
     `};
