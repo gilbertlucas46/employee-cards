@@ -62,7 +62,7 @@ const EmployeeCard = ({ employee, index }) => {
     const isActive = status === "active";
     return (
         <animated.div
-            class="card"
+            className="card"
             onMouseMove={({ clientX: x, clientY: y }) =>
                 set({ xys: calc(x, y) })
             }
